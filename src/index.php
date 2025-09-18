@@ -42,9 +42,18 @@ $catalogue = [
 // Code à écrire
 $incrementation = count($catalogue);
 $totalStock = 0;
+/*
 for ($ListCount = 0; $ListCount < $incrementation; $ListCount++)
     {
-        echo "Produit : " . $catalogue[$ListCount]["nom"] . " - Prix : " . $catalogue[$ListCount]["prix"] . "EUR \n";
+        echo "Produit : " . $catalogue[$ListCount]["nom"] . " - Prix : " . $catalogue[$ListCount]["prix"] . " EUR \n";
         $totalStock += $catalogue[$ListCount]["stock"];
+    }
+echo "Total des stocks : " . $totalStock;
+*/
+
+foreach ($catalogue as $ListCount)
+    {
+        echo "Produit : " . $ListCount["nom"] . " - Prix : " . $ListCount["prix"] . " EUR \n";
+        $totalStock += $ListCount["stock"];
     }
 echo "Total des stocks : " . $totalStock;
